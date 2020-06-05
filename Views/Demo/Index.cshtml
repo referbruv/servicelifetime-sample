@@ -1,0 +1,8 @@
+@model long
+@inject ScopedServices.TimestampServiceBase service
+@* @inject ScopedServices.IDateTimeService dt *@
+
+<p>Injected from constructor: @Model</p>
+<p>Injected inside the View @service.GetCurrentTimestamp()</p>
+<p>Injected from ServiceScope: @ViewBag.Timestamp</p>
+@* <p>@dt.PrintCurrentDateTime()</p> *@
